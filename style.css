@@ -1,336 +1,1053 @@
-@import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+/* ============================================================
+   SOUVIK BRAHMA - ONLINE RESUME
+   A4 / PDF-MATCHED LAYOUT
+============================================================ */
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e9e9e9;
+    color: #151515;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10.2pt;
+    line-height: 1.28;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
+
+
+/* ============================================================
+   COLORS
+============================================================ */
 
 :root {
-  --blue: #365f91;
-  --dark: #26384b;
-  --light-blue: #6e87a7;
-  --line: #858585;
-  --text: #151515;
+    --resume-blue: #365f91;
+    --resume-dark: #27394c;
+    --resume-light-blue: #7890ae;
+    --resume-grey: #858585;
+    --resume-black: #151515;
+    --page-white: #ffffff;
 }
 
-* { box-sizing: border-box; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #ececec;
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10.2pt;
-  line-height: 1.27;
-}
-
-body { padding: 24px 0; }
+/* ============================================================
+   OUTER CONTAINER
+============================================================ */
 
 .resume {
-  width: 210mm;
-  margin: 0 auto;
+    width: 210mm;
+    margin: 20px auto;
 }
 
-.page {
-  width: 210mm;
-  min-height: 297mm;
-  background: #fff;
-  margin: 0 auto 24px;
-  padding: 10mm 12.5mm 10mm 12.5mm;
-  position: relative;
-  overflow: hidden;
+
+/* ============================================================
+   A4 PAGE
+============================================================ */
+
+.resume-page {
+    width: 210mm;
+    height: 297mm;
+
+    min-height: 297mm;
+
+    background: var(--page-white);
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin: 0 auto 24px;
+
+    padding:
+        10mm
+        12.5mm
+        10mm
+        12.5mm;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: 8mm 1fr 63mm;
-  column-gap: 4mm;
-  align-items: start;
-  margin-bottom: 7mm;
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.resume-header {
+
+    display: grid;
+
+    grid-template-columns:
+        8mm
+        minmax(0, 1fr)
+        63mm;
+
+    column-gap: 4mm;
+
+    align-items: start;
+
+    margin-bottom: 6mm;
 }
 
-.header-mark {
-  width: 8mm;
-  height: 10mm;
-  background: var(--dark);
-  margin-left: -12.5mm;
+
+.header-decoration {
+
+    width: 8mm;
+    height: 10mm;
+
+    background: var(--resume-dark);
+
+    margin-left: -12.5mm;
 }
 
-.header-main h1 {
-  margin: 0 0 2px;
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: .2px;
+
+.header-content h1 {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    letter-spacing: 0.1px;
 }
 
-.subtitle {
-  color: var(--blue);
-  font-size: 11.2px;
-  letter-spacing: .15px;
-  margin-bottom: 2px;
+
+.professional-title {
+
+    margin-top: 2px;
+
+    color: var(--resume-blue);
+
+    font-size: 11.2px;
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
 }
 
-.intro {
-  margin: 0;
-  font-size: 10.2px;
-  line-height: 1.25;
+
+.header-description {
+
+    margin:
+        3px
+        0
+        0;
+
+    font-size: 10.1px;
+
+    line-height: 1.25;
 }
 
-.contact {
-  text-align: right;
-  font-size: 10px;
-  line-height: 2.05;
-  white-space: nowrap;
-}
-.contact-icon {
-  display: inline-block;
-  width: 17px;
-  margin-left: 4px;
-  color: var(--dark);
-  font-weight: 700;
-  text-align: center;
+
+.contact-details {
+
+    text-align: right;
+
+    font-size: 10px;
+
+    line-height: 2.05;
+
+    white-space: nowrap;
 }
 
-.top-grid {
-  display: grid;
-  grid-template-columns: 58.5% 41.5%;
-  gap: 4mm;
+
+.contact-item {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 4px;
 }
 
-.left-col, .right-col { min-width: 0; }
 
-.section { margin-bottom: 6mm; }
+.contact-symbol {
 
-.section h2 {
-  margin: 0 0 2.8mm;
-  padding-bottom: 1.2mm;
-  border-bottom: 1px solid var(--line);
-  color: var(--blue);
-  font-size: 15.2px;
-  font-weight: 700;
-  line-height: 1.1;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 16px;
+
+    color: var(--resume-dark);
+
+    font-weight: 700;
+
+    font-size: 10px;
 }
+
+
+/* ============================================================
+   PAGE 1 TWO-COLUMN GRID
+============================================================ */
+
+.page-one-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        58.5%
+        41.5%;
+
+    column-gap: 4mm;
+
+    width: 100%;
+}
+
+
+.left-column,
+.right-column {
+
+    min-width: 0;
+}
+
+
+/* ============================================================
+   SECTIONS
+============================================================ */
+
+.resume-section {
+
+    margin: 0 0 5.5mm;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--resume-blue);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    padding-bottom: 1.6mm;
+
+    margin-bottom: 2.5mm;
+
+    border-bottom:
+        1px solid
+        var(--resume-grey);
+}
+
 
 .section-icon {
-  color: var(--dark);
-  font-size: 17px;
-  width: 20px;
-  display: inline-block;
-  text-align: center;
+
+    width: 19px;
+
+    flex: 0 0 19px;
+
+    text-align: center;
+
+    color: var(--resume-dark);
+
+    font-size: 16px;
+
+    line-height: 1;
 }
 
-ul {
-  margin: 0;
-  padding-left: 6.5mm;
+
+/* ============================================================
+   GENERAL LIST
+============================================================ */
+
+.resume-list {
+
+    margin: 0;
+
+    padding-left: 6.2mm;
+
 }
 
-li { margin-bottom: 1.8mm; }
-.profile li { padding-left: 1.2mm; }
 
-.profile {
-  margin-bottom: 5mm;
+.resume-list li {
+
+    margin: 0 0 1.7mm;
+
+    padding-left: 0.8mm;
+
 }
 
-.timeline-section { margin-top: 1mm; }
 
-.timeline {
-  height: 43mm;
-  position: relative;
-  margin-top: 1mm;
+.resume-list li::marker {
+
+    font-size: 7px;
 }
 
-.timeline-art {
-  position: absolute;
-  left: 5mm;
-  top: 4mm;
-  width: 100%;
-  height: auto;
-  z-index: 0;
+
+/* ============================================================
+   PROFILE
+============================================================ */
+
+.profile-section {
+
+    margin-bottom: 4mm;
 }
 
-.timeline-item {
-  position: absolute;
-  z-index: 1;
-  text-align: center;
+
+.profile-section .resume-list li {
+
+    margin-bottom: 1.8mm;
+
 }
 
-.timeline-item .year {
-  color: var(--dark);
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 1.05;
+
+/* ============================================================
+   CAREER TIMELINE
+============================================================ */
+
+.timeline-section {
+
+    margin-bottom: 4mm;
 }
 
-.company-logo { object-fit: contain; display: block; margin: 3px auto; }
-.tcs-logo { width: 22mm; height: 16mm; }
-.kuba-logo { width: 31mm; height: 9mm; }
-.citius-logo { width: 31mm; height: 8mm; }
 
-.timeline-item .role {
-  font-size: 9px;
-  color: #111;
-  margin-top: 1px;
+.career-timeline {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 40mm;
+
+    margin-top: 1mm;
 }
 
-.top-role { margin-top: -31px !important; margin-bottom: 26px; }
 
-.tcs-item { left: 11%; top: 6mm; }
-.kuba-item { left: 43%; top: 2mm; }
-.citius-item { left: 73%; top: 7mm; }
+.timeline-background {
 
-.job {
-  margin-bottom: 5.2mm;
+    position: absolute;
+
+    z-index: 0;
+
+    left: 3mm;
+
+    top: 4mm;
+
+    width: calc(100% - 4mm);
+
+    height: auto;
+
+    display: block;
 }
 
-.job-title {
-  background: var(--blue);
-  color: white;
-  padding: 1.1mm 1.2mm;
-  font-size: 10px;
-  line-height: 1.05;
-  margin-bottom: 1.5mm;
+
+.timeline-company {
+
+    position: absolute;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: var(--resume-black);
 }
 
-.job-title span { opacity: .95; margin: 0 2px; }
 
-.job ul { padding-left: 6.5mm; }
-.job li { margin-bottom: 1.2mm; }
+.timeline-year {
 
-.tags {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1mm;
+    font-size: 9.5px;
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    color: var(--resume-dark);
+
+    min-height: 10px;
 }
 
-.tags span {
-  background: var(--blue);
-  color: #fff;
-  border-radius: 4px;
-  padding: 2.1mm 1.3mm;
-  text-align: center;
-  font-size: 8.9px;
-  line-height: 1.05;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.timeline-logo {
+
+    display: block;
+
+    object-fit: contain;
+
+    margin: 3px auto 2px;
 }
 
-.skills { margin-top: 21mm; }
 
-.skill-list > div {
-  position: relative;
-  padding-right: 13mm;
-  margin-bottom: 2.9mm;
-  line-height: 1.35;
+.tcs-logo {
+
+    width: 23mm;
+
+    height: 14mm;
 }
 
-.bars {
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: var(--light-blue);
-  font-size: 15px;
-  letter-spacing: 0;
-  white-space: nowrap;
+
+.kuba-logo {
+
+    width: 29mm;
+
+    height: 10mm;
 }
 
-.certifications { margin-top: 6mm; }
 
-.certifications ul { padding-left: 6mm; }
-.certifications li { padding-left: 1mm; }
+.citius-logo {
+
+    width: 31mm;
+
+    height: 9mm;
+}
+
+
+.timeline-role {
+
+    font-size: 8.8px;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+}
+
+
+/*
+   Positions are deliberately fixed so that the timeline
+   stays in the same place as the source resume.
+*/
+
+.timeline-tcs {
+
+    left: 7%;
+
+    top: 5mm;
+
+    width: 25%;
+}
+
+
+.timeline-kuba {
+
+    left: 38%;
+
+    top: 1mm;
+
+    width: 28%;
+}
+
+
+.timeline-citius {
+
+    left: 70%;
+
+    top: 5mm;
+
+    width: 27%;
+}
+
+
+/* ============================================================
+   EXPERIENCE
+============================================================ */
+
+.experience-section {
+
+    margin-top: 1mm;
+}
+
+
+.experience-item {
+
+    margin: 0 0 5mm;
+}
+
+
+.experience-title {
+
+    width: 100%;
+
+    background: var(--resume-blue);
+
+    color: white;
+
+    padding:
+        1.25mm
+        1.4mm;
+
+    font-size: 9.8px;
+
+    line-height: 1.12;
+
+    margin-bottom: 1.8mm;
+}
+
+
+.experience-title span {
+
+    margin:
+        0 2px;
+
+    opacity: 0.95;
+}
+
+
+.experience-list {
+
+    padding-left: 6.2mm;
+}
+
+
+.experience-list li {
+
+    margin-bottom: 1.25mm;
+}
+
+
+/* ============================================================
+   RIGHT COLUMN - CORE COMPETENCIES
+============================================================ */
+
+.competencies-section {
+
+    margin-bottom: 6mm;
+}
+
+
+.competency-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap:
+        1mm
+        1.2mm;
+
+    width: 100%;
+}
+
+
+.competency-grid div {
+
+    min-height: 9mm;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        1.5mm
+        1mm;
+
+    background: var(--resume-blue);
+
+    color: white;
+
+    border-radius: 4px;
+
+    font-size: 8.6px;
+
+    line-height: 1.05;
+}
+
+
+/* ============================================================
+   TECHNICAL SKILLS
+============================================================ */
+
+.technical-skills-section {
+
+    margin-top: 20mm;
+
+    margin-bottom: 6mm;
+}
+
+
+.technical-skills {
+
+    width: 100%;
+}
+
+
+.skill-row {
+
+    position: relative;
+
+    padding-right: 13mm;
+
+    margin-bottom: 2.8mm;
+
+    font-size: 9.1px;
+
+    line-height: 1.32;
+}
+
+
+.skill-bars {
+
+    position: absolute;
+
+    right: 0;
+
+    top: -1px;
+
+    color: var(--resume-light-blue);
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    letter-spacing: 0;
+}
+
+
+/* ============================================================
+   CERTIFICATIONS
+============================================================ */
+
+.certifications-section {
+
+    margin-top: 6mm;
+}
+
+
+.certifications-section .resume-list {
+
+    padding-left: 6mm;
+}
+
+
+.certifications-section .resume-list li {
+
+    margin-bottom: 2mm;
+}
+
+
+/* ============================================================
+   PAGE 2
+============================================================ */
 
 .page-two {
-  padding-top: 7mm;
+
+    padding-top: 7mm;
 }
 
-.continuation {
-  margin-bottom: 4.5mm;
+
+/* ============================================================
+   CONTINUATION
+============================================================ */
+
+.continuation-section {
+
+    margin-bottom: 5mm;
 }
 
-.continuation ul { padding-left: 6.5mm; }
 
-.highlights {
-  color: var(--blue);
-  font-weight: 700;
-  margin: 3mm 0 1mm;
-  padding-left: 0;
+.continuation-section .resume-list {
+
+    padding-left: 6.2mm;
 }
 
-.page-two .job { margin-bottom: 7mm; }
-.page-two .job li { margin-bottom: 1.35mm; }
 
-.education {
-  margin-top: 3mm;
-  margin-bottom: 9mm;
+.highlight-heading {
+
+    color: var(--resume-blue);
+
+    font-weight: 700;
+
+    margin:
+        3mm
+        0
+        1.2mm;
 }
 
-.edu-item {
-  margin: 0 0 3mm 0;
-  line-height: 1.55;
+
+/* ============================================================
+   PAGE 2 EXPERIENCE
+============================================================ */
+
+.page-two .experience-item {
+
+    margin-bottom: 6.5mm;
 }
 
-.edu-title {
-  color: var(--blue);
-  font-weight: 700;
+
+.page-two .experience-list li {
+
+    margin-bottom: 1.35mm;
 }
 
-.personal { margin-top: 1mm; }
 
-.personal > div { line-height: 1.55; }
+.tcs-experience {
 
-/* Keep the source resume's print-oriented two-page appearance. */
+    margin-top: 2mm;
+}
+
+
+/* ============================================================
+   EDUCATION
+============================================================ */
+
+.education-section {
+
+    margin-top: 2mm;
+
+    margin-bottom: 8mm;
+}
+
+
+.education-item {
+
+    margin-bottom: 3mm;
+
+    line-height: 1.5;
+}
+
+
+.education-title {
+
+    color: var(--resume-blue);
+
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+.education-title span {
+
+    color: var(--resume-black);
+
+    margin: 0 2px;
+}
+
+
+.education-institution {
+
+    line-height: 1.45;
+}
+
+
+.education-institution span {
+
+    margin: 0 2px;
+}
+
+
+/* ============================================================
+   PERSONAL DETAILS
+============================================================ */
+
+.personal-section {
+
+    margin-top: 1mm;
+}
+
+
+.personal-row {
+
+    line-height: 1.55;
+
+    margin-bottom: 0.5mm;
+}
+
+
+/* ============================================================
+   PRINT
+============================================================ */
+
 @page {
-  size: A4;
-  margin: 0;
+
+    size: A4;
+
+    margin: 0;
 }
+
 
 @media print {
-  html, body { background: #fff; }
-  body { padding: 0; }
-  .resume, .page {
-    width: 210mm;
-    margin: 0;
-  }
-  .page {
-    min-height: 297mm;
-    height: 297mm;
-    page-break-after: always;
-    break-after: page;
-  }
-  .page:last-child {
-    page-break-after: auto;
-    break-after: auto;
-  }
+
+    html,
+    body {
+
+        width: 210mm;
+
+        height: auto;
+
+        margin: 0;
+
+        padding: 0;
+
+        background: white;
+    }
+
+
+    body {
+
+        -webkit-print-color-adjust: exact;
+
+        print-color-adjust: exact;
+    }
+
+
+    .resume {
+
+        width: 210mm;
+
+        margin: 0;
+    }
+
+
+    .resume-page {
+
+        width: 210mm;
+
+        height: 297mm;
+
+        min-height: 297mm;
+
+        margin: 0;
+
+        page-break-after: always;
+
+        break-after: page;
+
+        overflow: hidden;
+    }
+
+
+    .resume-page:last-child {
+
+        page-break-after: auto;
+
+        break-after: auto;
+    }
 }
 
-@media (max-width: 900px) {
-  body { padding: 0; }
-  .resume { width: 100%; }
-  .page {
-    width: 100%;
-    min-height: auto;
-    margin: 0 0 12px;
-    padding: 28px 24px;
-  }
-  .header {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .header-mark { display: none; }
-  .contact { text-align: left; white-space: normal; }
-  .top-grid { grid-template-columns: 1fr; }
-  .skills { margin-top: 0; }
-  .timeline { height: 190px; }
+
+/* ============================================================
+   SCREEN RESPONSIVENESS
+============================================================ */
+
+/*
+   IMPORTANT:
+   We do NOT change the A4 layout for normal desktop/tablet
+   screens. The original resume is designed as a fixed A4 page.
+
+   Only when the viewport becomes smaller than 850px do we
+   switch to a readable mobile layout.
+*/
+
+
+@media screen and (max-width: 850px) {
+
+    body {
+
+        background: #ffffff;
+    }
+
+
+    .resume {
+
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    .resume-page {
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        margin: 0;
+
+        padding:
+            30px
+            24px;
+
+        overflow: visible;
+    }
+
+
+    .resume-header {
+
+        grid-template-columns: 1fr;
+
+        row-gap: 10px;
+    }
+
+
+    .header-decoration {
+
+        display: none;
+    }
+
+
+    .professional-title {
+
+        white-space: normal;
+    }
+
+
+    .contact-details {
+
+        text-align: left;
+
+        white-space: normal;
+    }
+
+
+    .contact-item {
+
+        justify-content: flex-start;
+    }
+
+
+    .page-one-grid {
+
+        grid-template-columns: 1fr;
+
+        row-gap: 30px;
+    }
+
+
+    .technical-skills-section {
+
+        margin-top: 0;
+    }
+
+
+    .career-timeline {
+
+        height: 180px;
+    }
+
+
+    .timeline-background {
+
+        width: 100%;
+
+        left: 0;
+    }
+
+
+    .page-two {
+
+        padding-top: 30px;
+    }
 }
 
-@media (max-width: 520px) {
-  html, body { font-size: 9.6pt; }
-  .page { padding: 22px 16px; }
-  .header-main h1 { font-size: 20px; }
-  .subtitle { font-size: 10px; }
-  .tags { grid-template-columns: 1fr; }
-  .timeline-art { left: 0; width: 100%; }
-  .tcs-item { left: 7%; }
-  .kuba-item { left: 38%; }
-  .citius-item { left: 69%; }
-  .company-logo { max-width: 80px; }
+
+/* ============================================================
+   VERY SMALL SCREENS
+============================================================ */
+
+@media screen and (max-width: 500px) {
+
+    body {
+
+        font-size: 9.5pt;
+    }
+
+
+    .resume-page {
+
+        padding:
+            22px
+            16px;
+    }
+
+
+    .header-content h1 {
+
+        font-size: 20px;
+    }
+
+
+    .professional-title {
+
+        font-size: 10px;
+    }
+
+
+    .header-description {
+
+        font-size: 9.7px;
+    }
+
+
+    .section-heading {
+
+        font-size: 14px;
+    }
+
+
+    .competency-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .career-timeline {
+
+        height: 170px;
+    }
+
+
+    .timeline-tcs {
+
+        left: 2%;
+    }
+
+
+    .timeline-kuba {
+
+        left: 34%;
+    }
+
+
+    .timeline-citius {
+
+        left: 67%;
+    }
+
+
+    .timeline-logo {
+
+        max-width: 90px;
+    }
 }
