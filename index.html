@@ -3,96 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Souvik Brahma - Professional Resume</title>
-    <link rel="stylesheet" href="./styles.css">
+
+    <title>John Doe - Resume</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="resume-container">
-    <header>
-        <div class="header-title">
-            <h1>Souvik Brahma</h1>
-            <h2>Software Engineer</h2>
-        </div>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:alex.morgan@email.com">alex.morgan@email.com</a></p>
-            <p>Phone: (555) 019-2834</p>
-            <p>GitHub: <a href="https://github.com" target="_blank">://github.com</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com" target="_blank">://linkedin.com</a></p>
-        </div>
-    </header>
+    <div class="resume">
 
-    <section id="summary">
-        <h3>Professional Summary</h3>
-        <p style="color: var(--text-light);">
-            Detail-oriented Software Engineer with 3+ years of experience building scalable web applications. Proven track record of optimizing application performance and collaborating with cross-functional teams to deliver clean, maintainable code.
-        </p>
-    </section>
+        <!-- Header -->
+        <header class="header">
+            <h1>John Doe</h1>
+            <p>Web Developer</p>
 
-    <section id="experience">
-        <h3>Work Experience</h3>
-        
-        <div class="item">
-            <div class="item-header">
-                <span>Active Tech Solutions</span>
-                <span>New York, NY</span>
+            <div class="contact">
+                <span>john@example.com</span>
+                <span>+91 98765 43210</span>
+                <span>Kolkata, India</span>
             </div>
-            <div class="item-sub">
-                <span>Software Engineer</span>
-                <span>Jan 2024 — Present</span>
+        </header>
+
+        <!-- Profile -->
+        <section>
+            <h2>Profile</h2>
+
+            <p>
+                Motivated and detail-oriented web developer with experience
+                in creating responsive websites and web applications using
+                HTML, CSS, JavaScript, and modern development tools.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+
+            <div class="item">
+                <h3>Bachelor of Computer Applications</h3>
+                <p>ABC University</p>
+                <span class="date">2021 - 2024</span>
             </div>
-            <ul class="item-description">
-                <li>Developed and maintained high-traffic web applications using JavaScript, Node.js, and React.</li>
-                <li>Optimized database queries, reducing API response latency by 25%.</li>
-                <li>Collaborated closely with UX/UI designers to improve interface usability and responsiveness.</li>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2>Work Experience</h2>
+
+            <div class="item">
+                <h3>Junior Web Developer</h3>
+                <p class="company">XYZ Company</p>
+                <span class="date">2024 - Present</span>
+
+                <ul>
+                    <li>Developed responsive websites using HTML, CSS and JavaScript.</li>
+                    <li>Improved website performance and user experience.</li>
+                    <li>Worked with designers and developers on web projects.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Web Development Intern</h3>
+                <p class="company">ABC Company</p>
+                <span class="date">2023 - 2024</span>
+
+                <ul>
+                    <li>Created reusable webpage components.</li>
+                    <li>Fixed bugs and maintained existing websites.</li>
+                    <li>Assisted with frontend development tasks.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2>Skills</h2>
+
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Git</span>
+                <span>Responsive Design</span>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2>Projects</h2>
+
+            <div class="item">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    Designed and developed a responsive portfolio website
+                    to showcase projects, skills, and professional experience.
+                </p>
+            </div>
+
+            <div class="item">
+                <h3>Online Shopping Website</h3>
+                <p>
+                    Built a basic e-commerce website with product listings,
+                    search functionality, and shopping cart interface.
+                </p>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section>
+            <h2>Languages</h2>
+
+            <ul>
+                <li>English</li>
+                <li>Hindi</li>
+                <li>Bengali</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="item">
-            <div class="item-header">
-                <span>Innovate Labs Inc.</span>
-                <span>Boston, MA</span>
-            </div>
-            <div class="item-sub">
-                <span>Junior Developer</span>
-                <span>Jun 2022 — Dec 2023</span>
-            </div>
-            <ul class="item-description">
-                <li>Assisted in shifting a legacy codebase into modern, component-based architectures.</li>
-                <li>Wrote automated unit tests, increasing total test coverage from 60% to 85%.</li>
-                <li>Fixed critical software bugs identified during routine integration testing.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h3>Skills</h3>
-        <div class="skills-grid">
-            <div class="skill-tag">JavaScript / ES6</div>
-            <div class="skill-tag">HTML5 & CSS3</div>
-            <div class="skill-tag">React.js</div>
-            <div class="skill-tag">Node.js</div>
-            <div class="skill-tag">Git & GitHub</div>
-            <div class="skill-tag">SQL / PostgreSQL</div>
-            <div class="skill-tag">RESTful APIs</div>
-            <div class="skill-tag">Agile / Scrum</div>
-        </div>
-    </section>
-
-    <section id="education">
-        <h3>Education</h3>
-        <div class="item">
-            <div class="item-header">
-                <span>State University</span>
-                <span>GPA: 3.8/4.0</span>
-            </div>
-            <div class="item-sub">
-                <span>B.S. in Computer Science</span>
-                <span>Graduated May 2022</span>
-            </div>
-        </div>
-    </section>
-</div>
+    </div>
 
 </body>
 </html>
