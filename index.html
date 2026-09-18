@@ -14,6 +14,7 @@
 
 <body>
     <main class="page">
+        <!-- Header card -->
         <header class="header header-card">
             <div class="header-left">
                 <h1 class="name">Souvik Brahma</h1>
@@ -67,70 +68,176 @@
 
             <div class="header-right">
                 <div class="profile-frame">
-                    <img src="assets/images/profile.jpg" alt="Souvik Brahma" class="profile-img">
+                    <img src="_assets/profile.jpg" alt="Souvik Brahma" class="profile-img">
                 </div>
             </div>
         </header>
 
-        <section class="content">
-            <div class="card">
-                <h2 class="section-title">Profile Summary</h2>
-                <p>An enterprising professional aiming to architect and deliver scalable, secure, and business-aligned
-                    enterprise platforms by leveraging deep expertise in distributed systems, cloud architecture, and
-                    technical leadership.</p>
-                <p>Amassed nearly 13 years of experience in architecting and scaling enterprise-grade, cloud-native
-                    platforms across regulated and high-transaction domains including banking, healthcare, public
-                    transport, and telecom.</p>
-            </div>
+        <!-- Tabs -->
+        <nav class="tabs" role="tablist" aria-label="Primary">
+            <button class="tab active" role="tab" aria-selected="true" data-target="tab-summary">Summary</button>
+            <button class="tab" role="tab" aria-selected="false" data-target="tab-experience">Work Experience</button>
+            <button class="tab" role="tab" aria-selected="false" data-target="tab-tech">Skills & Certifications</button>
+            <button class="tab" role="tab" aria-selected="false" data-target="tab-education">Education</button>
+            <button class="tab" role="tab" aria-selected="false" data-target="tab-interests">Interests</button>
+        </nav>
 
-            <div class="two-col">
+        <!-- Tab panels -->
+        <section class="tab-panels">
+            <!-- Summary tab -->
+            <div id="tab-summary" class="tab-panel active" role="tabpanel">
                 <div class="card">
-                    <h2 class="section-title">Core Competencies</h2>
-                    <ul class="skill-grid">
-                        <li>Enterprise Solution Architecture</li>
-                        <li>Cloud &amp; Platform Architecture</li>
-                        <li>Distributed Systems Design</li>
-                        <li>Performance Optimization</li>
-                        <li>High-Availability &amp; Resilience</li>
-                        <li>Legacy Modernization</li>
-                        <li>Cross-functional Coordination</li>
-                        <li>Team Mentoring</li>
+                    <h2 class="section-title">Profile Summary</h2>
+                    <p class="lead">An enterprising professional aiming to architect and deliver scalable, secure, and
+                        business-aligned enterprise platforms by leveraging deep expertise in distributed systems, cloud
+                        architecture, and technical leadership.</p>
+                    <p class="lead">Amassed nearly 13 years of experience in architecting and scaling enterprise-grade,
+                        cloud-native platforms across regulated and high-transaction domains including banking,
+                        healthcare, public
+                        transport, and telecom.</p>
+
+                    <ul class="profile-bullets">
+                        <li>Excellence in distributed systems architecture, specializing in microservices-led,
+                            event-driven, and
+                            streaming-based solutions emphasizing resilience, security, performance, and cost
+                            optimization.</li>
+                        <li>Skilled in AWS cloud ecosystems, driving multi-account, multi-VPC, and cross-region
+                            architectures with
+                            PrivateLink, MSK, EKS, Lambda, Cognito, API Gateway, KMS, and S3.</li>
+                        <li>Hands-on experience translating requirements into technical blueprints, defining system
+                            architecture,
+                            data flows, security models, and compliance frameworks aligned with HIPAA and GDPR.</li>
+                        <li>Proven expertise in architectural governance, standards, reference architectures, and design
+                            principles.
+                        </li>
+                        <li>Strong practitioner of performance engineering and system optimization to meet latency,
+                            throughput, and
+                            availability SLAs.</li>
+                        <li>Adept at mentoring engineers and leading cross-functional teams across distributed
+                            stakeholders.</li>
                     </ul>
                 </div>
 
+                <footer class="card footer-card">
+                    <h3 class="section-title">Personal Details</h3>
+
+                    <ul class="profile-bullets personal-details">
+                        <li>
+                            <span class="detail-label">Languages Known : </span>
+                            <span class="detail-value">English, Bengali, Hindi</span>
+                        </li>
+
+                        <li>
+                            <span class="detail-label">Location : </span>
+                            <span class="detail-value">Pune, Maharashtra, India</span>
+                        </li>
+                    </ul>
+                </footer>
+            </div>
+
+            <!-- Technical skills & certifications -->
+            <div id="tab-tech" class="tab-panel" role="tabpanel" hidden>
                 <div class="card">
-                    <h2 class="section-title">Experience (Highlights)</h2>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="competency-grid">
+                        <div class="competency-block"><strong>Languages</strong>
+                            <div class="block-body">Java, Kotlin, Python, SQL</div>
+                        </div>
+                        <div class="competency-block"><strong>Frameworks</strong>
+                            <div class="block-body">Spring Boot, Spring Cloud, Hibernate/JPA, Rest Assured</div>
+                        </div>
+                        <div class="competency-block"><strong>Cloud</strong>
+                            <div class="block-body">AWS (Lambda, Cognito, API Gateway, S3, EKS, KMS), Kubernetes</div>
+                        </div>
+                        <div class="competency-block"><strong>Databases</strong>
+                            <div class="block-body">MySQL, Oracle, Cassandra, DynamoDB</div>
+                        </div>
+                        <div class="competency-block"><strong>Middleware</strong>
+                            <div class="block-body">Oracle SOA Suite, Oracle Service Bus, Oracle Integration Cloud</div>
+                        </div>
+                        <div class="competency-block"><strong>DevOps & Observability</strong>
+                            <div class="block-body">Jenkins, GitHub Actions, Datadog, Splunk, Prometheus, Grafana</div>
+                        </div>
+                        <div class="competency-block"><strong>IaC</strong>
+                            <div class="block-body">Terraform</div>
+                        </div>
+                        <div class="competency-block"><strong>Data Libraries</strong>
+                            <div class="block-body">NumPy, Pandas</div>
+                        </div>
+                        <div class="competency-block"><strong>Methodologies</strong>
+                            <div class="block-body">Agile, Scrum, Waterfall, TDD</div>
+                        </div>
 
-                    <div class="job">
-                        <h3 class="job-title">Solution Architect — CitiusTech</h3>
-                        <p class="job-meta">Apr 2025 - Present | Pune, India</p>
-                        <ul>
-                            <li>Architected secure, high-throughput streaming ecosystems across multiple AWS VPCs,
-                                accounts, and regions using AWS MSK and PrivateLink.</li>
-                            <li>Shaped cloud-native microservices architecture for medical imaging analytics platforms
-                                supporting DICOM, WSI, and NIFTI.</li>
-                        </ul>
+                        <div class="competency-block"><strong>Others</strong>
+                            <div class="block-body">Kafka, Redis, Docker</div>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="job">
-                        <h3 class="job-title">Senior Software Engineer — Kubapay (Unwire)</h3>
-                        <p class="job-meta">Oct 2022 - Mar 2025 | Copenhagen, Denmark</p>
-                        <ul>
-                            <li>Built multi-tenant SaaS solution for automated fare computation using Kotlin and Spring
-                                Boot microservices.</li>
-                            <li>Implemented low-latency APIs and event-stream auditing via Amazon MSK.</li>
-                        </ul>
+                <div class="card">
+                    <h2 class="section-title">Core Competencies</h2>
+                    <div class="competency-grid">
+                        <div class="competency-block">Enterprise Solution Architecture</div>
+                        <div class="competency-block">Cloud &amp; Platform Architecture</div>
+                        <div class="competency-block">Distributed Systems Design</div>
+                        <div class="competency-block">Performance Optimization</div>
+                        <div class="competency-block">High-Availability &amp; Resilience</div>
+                        <div class="competency-block">Legacy Modernization</div>
+                        <div class="competency-block">Cross-functional Coordination</div>
+                        <div class="competency-block">Team Mentoring</div>
                     </div>
+                </div>
 
-                    <div class="job">
-                        <h3 class="job-title">Technical Lead — Tata Consultancy Services</h3>
-                        <p class="job-meta">Mar 2013 - Sep 2022 | Kolkata, India</p>
-                        <ul>
-                            <li>Led design of a real-time Master Data Management platform using Java, Spring Boot,
-                                Kafka, and NoSQL.</li>
-                            <li>Modernized data platforms with Kafka-driven, event-oriented cloud architecture.</li>
-                        </ul>
+                <div class="card">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="cert-grid">
+                        <div class="cert-block">Oracle SOA Suite 11g Certified Implementation Specialist</div>
+                        <div class="cert-block">Oracle SOA Suite 12c Certified Implementation Specialist</div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Work experience with programmatic timeline -->
+            <div id="tab-experience" class="tab-panel" role="tabpanel" hidden>
+                <div class="card">
+                    <h2 class="section-title">Work Experience</h2>
+
+                    <!-- Timeline container: nodes are added programmatically -->
+                    <div class="timeline-visual" id="career-timeline" aria-label="Career timeline"></div>
+                </div>
+
+                <!-- Detailed job entries (kept for SEO / readability) -->
+                <div class="card">
+                    <h2 class="section-title">Detailed Experience</h2>
+
+                    <div id="experience-grid" class="competency-grid">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education with project fields -->
+            <div id="tab-education" class="tab-panel" role="tabpanel" hidden>
+                <div class="card">
+                    <h2 class="section-title">Education</h2>
+
+                    <div id="education-grid" class="competency-grid">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interests -->
+            <div id="tab-interests" class="tab-panel" role="tabpanel" hidden>
+                <div class="card">
+                    <h2 class="section-title">Interests</h2>
+                    <p class="muted">A few things I enjoy outside of work:</p>
+                    <ul class="interest-list">
+                        <li>Photography — medical imaging and landscape composition</li>
+                        <li>Open-source contributions — cloud-native tooling and observability</li>
+                        <li>Reading — distributed systems, performance engineering</li>
+                        <li>Travel — exploring tech conferences and local cultures</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -140,6 +247,7 @@
         </footer>
     </main>
 
+    <script src="experience.js"></script>
     <script src="script.js"></script>
 </body>
 
