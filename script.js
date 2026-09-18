@@ -1,5 +1,4 @@
 // script.js
-// Tab switching, footer year, and programmatic timeline helper (role + company on separate lines)
 
 document.addEventListener('DOMContentLoaded', function () {
   // Set footer year
